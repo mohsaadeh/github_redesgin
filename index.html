@@ -51,11 +51,30 @@
             color: brown;
         }
         .navHeader{
-            display: flex;justify-content: center;width: 100%;gap: 10px;padding: 20px;
+            display: flex;justify-content: center;width: 100%;gap: 10px;padding: 20px;height: 70px;
         }
         .navHeader i{
             font-size: large;
 
+        }
+
+        .btnEdit{
+            padding: 5px 15px;margin: 10px; width: 200px;font-size: 14px;cursor: pointer;border-radius: 5px;
+        }
+
+        .btnEdit:hover{
+            background-color: #bdbdbd;
+            border: 1px solid gray;
+        }
+        .repo-container{
+            width: 70%;   display: flex;
+gap: 5px;
+flex-wrap: wrap;
+justify-content: start;
+
+        }
+        .repo-card{
+            width: 48%;height: 200px;border:1px solid gray
         }
     </style>
 </head>
@@ -98,7 +117,7 @@
 </ul>
 </nav>
 <div class="contaner_profile">
-<img src="img/GitHub_Invertocat_" alt="Profile_Image">
+<!-- <img src="img/GitHub_Invertocat_" alt="Profile_Image"> -->
 </div>
 </header>
 <main>
@@ -124,9 +143,43 @@
         <span>Stars</span>
     </div>
 </div>
+<div style="width: 100%;">
+    <hr style="border-top: 1px solid #bdbdbd;">
+</div>
+
+<div style="display: flex;">
+<div style="width: 30%;position: relative;">
+    <div style="width: 300px;height:300px;margin: 0 auto;position: absolute;top: -20px;left: 60px;text-align: center;">
+    <img src="img/127286098.jpeg" alt="" id="profile-img" style="border-radius: 50%;width: 100%;">
+    <br>
+    <br>
+    <h3 id="profile-name" style="color: gray;font-family: 'Courier New', Courier, monospace;">mohammad saadeh</h3>
+
+    <button class="btnEdit">Edit profile</button>
+    </div>
+</div>
+<div class="repo-container">
+<div style="width: 100%;">
+<p>Popular repositories</p>
+</div>
+    <div class="repo-card">
+
+    </div>
+
+    <div class="repo-card">
+
+    </div>
+    
+
+</div>
+</div>
+
+<div id="root">
+
+</div>
 
 </main>
-<script src="api.js"></script>
+<!-- <script src="api.js"></script> -->
 
 </body>
 </html>
