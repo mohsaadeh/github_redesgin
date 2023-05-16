@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    background-color: black;
+    color: white;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 100px;
+}
+
+main{
+    min-height: 500px;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    padding: 5px;
+}
+
+.serach{
+    position: relative;
+}
+.serach button{
+    position: absolute;
+    color: black;
+    background-color: white;
+    font-size: 24px;
+    top: 6px;
+    left: 5px;
+    cursor: pointer;
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul li a:hover{
+    color: brown;
+}
+.navHeader{
+    display: flex;justify-content: center;width: 100%;gap: 10px;padding: 20px;height: 70px;
+}
+.navHeader i{
+    font-size: large;
+
+}
+
+.btnEdit{
+    padding: 5px 15px;margin: 10px; width: 200px;font-size: 14px;cursor: pointer;border-radius: 5px;
+}
+
+.btnEdit:hover{
+    background-color: #bdbdbd;
+    border: 1px solid gray;
+}
+.repo-container{
+    width: 70%;   display: flex;
+gap: 5px;
+flex-wrap: wrap;
+justify-content: end;
+
+}
+.repo-card{
+    width: 45%;height: 100px;border:1px solid rgb(162, 161, 161);margin: 10px;border-radius: 10px;padding: 15px;    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+}
+.img_container{
+    width: 300px;height:300px;margin: 0 auto;position: absolute;top: -20px;left: 60px;text-align: center;
+}
+
+.left-side{
+    width: 30%;position: relative;
+}
+.repo-card a{
+    color: #0969da;
+    font-size: medium;
+    font-weight: 600;
+    
+}
+
+.public-box{
+    border: 1px solid gray;
+    width: 61px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 5px;
+    color: #948989;
+}
+
+.repo-card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.repo-type{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+    flex-direction: column;
+    }
+    .left-side{
+        width: 100%;
+    }
+    .img_container{
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+    }
+
+    .repo-container{
+        width: 100%;
+        justify-content: center;
+    }
+    .repo-card{
+        width: 90%;
+    }
+  }
