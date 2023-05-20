@@ -5,49 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    *{
-        margin: 0;
-        padding: 0;
 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input[type=text] {
+border: 1px solid gray;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #343634; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover{
+    background-color: white; /* Green */
+  border: 1px solid #343634;
+  color: #343634;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    input[type=text] {
+        width: 90%;
+        margin: 8px auto;
     }
+}
     </style>
 </head>
 <body>
-
+    <header>
+        <div style="display: flex;">
+    <div class="logo">
+    <!-- <img src="img/GitHub_Invertocat_Logo.svg.png" alt="Profile_Image" width="60px"> -->
+    <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+    </svg>
+    
+    </div>
+    <!-- <div class="serach">
+        <button onclick="search()">
+            <i class="las la-search"></i>
+        </button>
+    <input type="text" id="txtSearch" style="text-align: center;padding: 10px ;border-radius: 10px;">
+    </div> -->
+    </div>
+    
+    <nav>
+    <ul>
+        <li>
+            <a href="index.html">Profile</a>
+        </li>
+         <li>
+            <a href="compare.html">Compare</a>
+        </li>
+    </ul>
+    </nav>
+    <div class="contaner_profile">
+    <!-- <img src="img/GitHub_Invertocat_" alt="Profile_Image"> -->
+    </div>
+    </header>
     <div style="display: flex;flex-wrap: wrap;">
-<div style="width: 100%;background-color: aqua;">
-he
-</div>
+
 <div style="width: 50%;">
 
     <div style="display: flex;flex-direction: column;align-items: center;">
-        <h1 style="margin: 50px;">
-            Winner
+        <h1 style="margin: 50px;" id="result1">
+      
         </h1>
-        <h3 style="margin: 20px;">Hello</h3>
-        <h4>Score : <span id="score">12312</span></h4>
-        <img src="img/127286098.jpeg" alt="" style="border-radius: 50%;width: 200px;">
+        <h3 style="margin: 20px;" id="username1">Player 1</h3>
+        <h4>Score : <span id="score1">0</span></h4>
+        <img src="img/4140037.png" alt="" id="img1" class="avatar">
+
 
     </div>
+    <div style="width: 100%;display: flex;flex-direction: column;align-items: center;margin-top: 10px;">
+
+        <input type="text" id="txtSearch1" >
+        <button  onclick="getPlayer1()">Search</button>
+        </div>
 </div>
 <div style="width: 50%">
     <div style="display: flex;flex-direction: column;align-items: center;">
-        <h1 style="margin: 50px;">
-            Loser
+        <h1 style="margin: 50px;" id="result2">
+       
         </h1>
-        <h3 style="margin: 20px;">Hello</h3>
-        <h4>Score : <span id="score">12312</span></h4>
-        <img src="img/127286098.jpeg" alt="" style="border-radius: 50%;width: 200px;">
-
+        <h3 style="margin: 20px;" id="username2">Player 2</h3>
+        <h4>Score : <span id="score2">0</span></h4>
+        <img src="img/4140037.png" alt="" id="img2" class="avatar" >
+        <h3 id="profile-name" style="color: gray;font-family: 'Courier New', Courier, monospace;"></h3>
     </div>
+    <div style="width: 100%;display: flex;flex-direction: column;align-items: center;margin-top: 10px;">
+        <input type="text" id="txtSearch2" >
+        <button  onclick="getPlayer2()">Search</button>
+        </div>
 </div>
 
-<div style="width: 100%;display: flex;flex-direction: column;align-items: center;">
-<input type="text">
-<button>Submit</button>
-</div>
+
     </div>
     
 </body>
+<script src="compare.js"></script>
 </html>

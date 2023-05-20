@@ -34,7 +34,7 @@ nav ul li{
     color: black;
     background-color: white;
     font-size: 24px;
-    top: 6px;
+    top: 4px;
     left: 5px;
     cursor: pointer;
 }
@@ -111,8 +111,14 @@ justify-content: end;
     display: flex;
 }
 
+.avatar{
+    border-radius: 50%;width: 200px;margin: 10px auto;
+}
 
 @media only screen and (max-width: 600px) {
+    .avatar{
+        width: 120px
+    }
     .container {
     flex-direction: column;
     }
